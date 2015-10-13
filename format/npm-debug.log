@@ -1,0 +1,75 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   'syntaxhighlighter' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of C:\xiaok\app\format\package.json
+5 verbose installManyTop reading scoped package data from C:\xiaok\app\format\node_modules\css\package.json
+6 verbose installManyTop reading scoped package data from C:\xiaok\app\format\node_modules\jquery\package.json
+7 verbose installManyTop reading scoped package data from C:\xiaok\app\format\node_modules\js-beautify\package.json
+8 verbose installManyTop reading scoped package data from C:\xiaok\app\format\node_modules\prismjs\package.json
+9 info package.json jquery@2.1.4 No license field.
+10 verbose readDependencies loading dependencies from C:\xiaok\app\format\package.json
+11 silly cache add args [ 'syntaxhighlighter', null ]
+12 verbose cache add spec syntaxhighlighter
+13 silly cache add parsed spec { raw: 'syntaxhighlighter',
+13 silly cache add   scope: null,
+13 silly cache add   name: 'syntaxhighlighter',
+13 silly cache add   rawSpec: '',
+13 silly cache add   spec: '*',
+13 silly cache add   type: 'range' }
+14 silly addNamed syntaxhighlighter@*
+15 verbose addNamed "*" is a valid semver range for syntaxhighlighter
+16 silly addNameRange { name: 'syntaxhighlighter', range: '*', hasData: false }
+17 silly mapToRegistry name syntaxhighlighter
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry uri https://registry.npmjs.org/syntaxhighlighter
+21 verbose addNameRange registry:https://registry.npmjs.org/syntaxhighlighter not in flight; fetching
+22 verbose request uri https://registry.npmjs.org/syntaxhighlighter
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 17:34:49
+25 verbose request id 852fa24105e17da4
+26 verbose etag "B9160F7DLP4OCTPWEUTGN3IZ5"
+27 http request GET https://registry.npmjs.org/syntaxhighlighter
+28 info retry will retry, error on last attempt: Error: read ECONNRESET
+29 info attempt registry request try #2 at 17:35:22
+30 verbose etag "B9160F7DLP4OCTPWEUTGN3IZ5"
+31 http request GET https://registry.npmjs.org/syntaxhighlighter
+32 info retry will retry, error on last attempt: Error: read ECONNRESET
+33 info attempt registry request try #3 at 17:36:42
+34 verbose etag "B9160F7DLP4OCTPWEUTGN3IZ5"
+35 http request GET https://registry.npmjs.org/syntaxhighlighter
+36 silly get cb [ 304, undefined ]
+37 verbose etag https://registry.npmjs.org/syntaxhighlighter from cache
+38 verbose get saving syntaxhighlighter to C:\Users\xiaok\AppData\Roaming\npm-cache\registry.npmjs.org\syntaxhighlighter\.cache.json
+39 silly addNameRange number 2 { name: 'syntaxhighlighter', range: '*', hasData: true }
+40 silly addNameRange versions [ 'syntaxhighlighter', [ '4.0.0-alpha' ] ]
+41 verbose stack Error: No compatible version found: syntaxhighlighter@'*'
+41 verbose stack Valid install targets:
+41 verbose stack ["4.0.0-alpha"]
+41 verbose stack
+41 verbose stack     at installTargetsError (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:274:12)
+41 verbose stack     at next (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:253:17)
+41 verbose stack     at setData (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:230:5)
+41 verbose stack     at RES (C:\Program Files\nodejs\node_modules\npm\node_modules\inflight\inflight.js:23:14)
+41 verbose stack     at f (C:\Program Files\nodejs\node_modules\npm\node_modules\once\once.js:17:25)
+41 verbose stack     at fixName (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:29:5)
+41 verbose stack     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:173:7)
+41 verbose stack     at FSReqWrap.oncomplete (fs.js:95:15)
+42 verbose cwd C:\xiaok\app\format
+43 error Windows_NT 6.3.9600
+44 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "syntaxhighlighter"
+45 error node v0.12.7
+46 error npm  v2.11.3
+47 error code ETARGET
+48 error notarget No compatible version found: syntaxhighlighter@'*'
+48 error notarget Valid install targets:
+48 error notarget ["4.0.0-alpha"]
+48 error notarget
+48 error notarget This is most likely not a problem with npm itself.
+48 error notarget In most cases you or one of your dependencies are requesting
+48 error notarget a package version that doesn't exist.
+49 verbose exit [ 1, true ]
