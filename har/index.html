@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	
+	<head>
+		<meta charset="utf8" />
+		<style>
+			input,textarea,iframe,button{
+				display: block;
+				margin-bottom: 10px;
+			}
+			input{
+				min-width: 640px;
+			}
+			textarea{
+				min-width: 640px;
+				min-height: 320px;
+			}
+			iframe{
+				width: 100%;height: 440px;
+				border: none;
+				border-top: 2px solid #111;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div>
+			<input name="path" placeholder="输出路径" />
+			<textarea name="har" placeholder="Har数据"></textarea>
+			<button id="submit">提交</button>
+		</div>	
+		<div id="msg"></div>
+		<script>
+			 function log(msg){
+				 var p = document.createElement("p");
+				// var message = "<p>"+msg+"<p>";
+				p.innerText = msg;
+				var emsg = document.getElementById("msg");
+				var first = document.querySelector("#msg>p:first-child");
+				emsg.insertBefore(p,first);
+			}
+			(function(){
+				// var har = document.getElementsByName("har")[0];
+				// 
+				// har.addEventListener("focus",function(event){
+				// 	//console.log(this,event);
+				// 	this.value = "";
+				// 	document.getElementById("msg").innerHTML = "";
+				// });
+				
+			})();
+			
+		</script>
+		<script src="app.js"></script>
+		<iframe name="iframe" />
+	</body>
+</html>

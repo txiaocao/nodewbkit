@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <link href="app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav>
+        <a data="css" class="active">CSS格式化</a>
+        <a data="js">JS格式化</a>
+        <a data="json">JSON格式化</a>
+        <a data="html">Html格式化</a>
+    </nav>
+    <button id="format">格式化</button>
+    <div class="content">
+        <textarea id="content"></textarea>
+        <textarea id="content2"></textarea>
+    </div>
+    <script>
+
+        (function() {
+            var $ = require("jquery");
+            
+            //prism.highlightElement();
+            
+            //console.log($);
+            $("nav>a").on("click", function() {
+                //alert(1);
+                document.getElementById("content").value = "";
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+            $("#format").bind("click", function() {
+                
+                var mode = $("nav>a.active").attr("data");
+                console.log(mode);
+                switch (mode) {
+                    case "css":
+                        var css = require("css");
+                        var content = document.getElementById("content").value;
+                        document.getElementById("content2").innerHTML = css.stringify(css.parse(content));
+                        break;
+                    case "js":
+                        var format = require("js-beautify").js_beautify;
+                        var raw = document.getElementById("content").value;
+
+                        var afterdata = format(raw);
+                        document.getElementById("content2").innerHTML = afterdata;
+                        break;
+                    case "json":
+                        var format = require("js-beautify").js_beautify;
+                        var raw = document.getElementById("content").value;
+
+                        var afterdata = format(raw);
+                        document.getElementById("content2").value = afterdata;
+                        break;
+                    case "html":
+                        var format = require("js-beautify").html;
+                        var raw = document.getElementById("content").value;
+
+                        var afterdata = format(raw);
+                        document.getElementById("content2").value = afterdata;
+                        break;
+                }
+            });
+
+        })();
+    </script>
+</body>
+
+</html>
